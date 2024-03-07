@@ -9,8 +9,9 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 player = Player()
+car_manager = CarManager()
 
-cars = []
+
 
 
 
@@ -21,11 +22,5 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
-    num_cars = random.randint(7,15)
-    for car in range(num_cars):
-        car = CarManager()
-        cars.append(car)
-        time.sleep(0.3)
-
-    for car in cars:
-        car.movement()
+    car_manager.create_car()
+    car_manager.movement()
