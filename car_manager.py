@@ -14,7 +14,7 @@ class CarManager(Turtle):
     def create_car(self): 
         random_int = random.randint(1,6)
         if random_int == 1:
-            self.shape("square")
+            self.shape("square")        #bug with square?
             self.color(random.choice(COLORS))
             self.penup()
             self.goto(y=random.randint(-250,250),x=290)
