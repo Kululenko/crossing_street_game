@@ -29,6 +29,11 @@ while game_is_on:
         if player.distance(car) < 20:
             scoreboard.game_over()
             game_is_on=False
-            
+    if player.ycor() > 285:
+        player.lv_up()
+        car_manager.lv_up()
+        scoreboard.lv_up()
+
+
             
 screen.exitonclick()

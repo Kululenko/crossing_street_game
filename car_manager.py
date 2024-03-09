@@ -29,3 +29,7 @@ class CarManager(Turtle):
             car.forward(STARTING_MOVE_DISTANCE)
             
 
+    def lv_up(self):
+        global STARTING_MOVE_DISTANCE
+        STARTING_MOVE_DISTANCE += MOVE_INCREMENT
+        self.movement()
