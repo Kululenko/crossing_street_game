@@ -20,7 +20,11 @@ screen.onkey(player.move_up,"Up")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.2)
+    time.sleep(0.1)
     screen.update()
     car_manager.create_car()
     car_manager.movement()
+    for car in car_manager.carlist:
+        if player.distance(car) < 20:
+            pass
+            
