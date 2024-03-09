@@ -10,6 +10,7 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 player = Player()
 car_manager = CarManager()
+scoreboard = Scoreboard()
 
 
 
@@ -26,5 +27,8 @@ while game_is_on:
     car_manager.movement()
     for car in car_manager.carlist:
         if player.distance(car) < 20:
-            pass
+            scoreboard.game_over()
+            game_is_on=False
             
+            
+screen.exitonclick()
